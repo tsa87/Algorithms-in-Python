@@ -1,3 +1,8 @@
+"""
+Floor square root function is implemented without using any library.
+Algorithm inspired by the explanation from:
+https://medium.com/i-math/how-to-find-square-roots-by-hand-f3f7cadf94bb
+"""
 def div(x,y):
   quotient = x // y
   remainder = x - y * quotient
@@ -17,13 +22,13 @@ def floor_sqrt(x):
   x_prime, _ = div(x, 4)
   a = floor_sqrt(x_prime)
 
-  residual = x - 4 * a * a
+  residual = x - 4*a*a
   b = 0
   while not (4*a*b + b*b > residual):
     b = b + 1
   b = b - 1
 
-  return b + 2 * a
+  return b + 2*a
 
 
 
