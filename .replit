@@ -1,0 +1,4 @@
+language = "c"
+  run = "gcc division.c"
+
+  
