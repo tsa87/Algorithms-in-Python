@@ -1,4 +1,4 @@
 language = "c"
-  run = "gcc division.c"
+  run = "gcc primality.c"
 
   
