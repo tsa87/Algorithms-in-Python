@@ -33,9 +33,10 @@ u64 modexp(u64 x, u64 y, u64 N){
 
 // Error rate lower bounded by Pi(i=0 to k){((N-1)/2-i)/(N-1-i)}
 // Does not take into account of Carmichael numbers.
+// "k" is the # of fermat's little theorem tests to run.
 bool is_prime(u64 N, int k){
   if (N < 2) return false;
-  if (k > (N-1)) k = N-1;
+  if (k > (N-1)) k = N-1;   //k can only be chosen from 1-N-1.
 
   // An array of "a" (1<= a < N)
   u64* arr = (u64*)malloc((N-1) * sizeof(u64)); 
