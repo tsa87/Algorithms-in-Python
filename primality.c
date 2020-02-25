@@ -47,9 +47,11 @@ bool is_prime(u64 N, int k){
   for (int i = 0; i < k; i++){
     if (modexp(arr[i], N-1, N) != 1) { 
       return false;
+      free(arr);
     }
   }
   return true;
+  free(arr);
 }
 
 int main() {
