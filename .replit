@@ -1,4 +1,0 @@
-language = "c"
-  run = "gcc primality.c"
-
-  
